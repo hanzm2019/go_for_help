@@ -1,0 +1,53 @@
+{
+  "env": "test",
+
+  "nac": {
+    "ciscoReauthenticateAVPair": "subscriber:command=reauthenticate",
+    "ciscoLastAVPair": "subscriber:reauthenticate-type=last",
+    "reauthDstIpAddr": "12.18.81.2:1700",
+    "acIp": "12.18.81.2",
+    "secret": "hanhanzi123",
+    "redirectUrl": "url-redirect=http://12.18.3.86/tcl",
+    "preAuthAcl": "url-redirect-acl=Pre-Auth-For-WebRedirect",
+    "permissionAcl": "Filter-Id = Authorize_any",
+    "letGoMAcs": "8c5d4f2af2c1;87534251eadb",
+
+    "serverIpAddr": "0.0.0.0:1812",
+    "srcIpAddr": "12.18.3.86:41340",
+    "disconnectDstIpAddr": "12.18.81.2:3799"
+  },
+
+  "mysqlDb": {
+    "username": "root",
+    "password": "123456",
+    "host": "127.0.0.1",
+    "port": "3306",
+    "dbname": "tcp_work"
+  },
+
+  "redisdb": {
+    "dbBase": 3,
+    "protocol": "tcp",
+    "ip": "127.0.0.1",
+    "port": "6379",
+    "auth": ""
+  },
+  "login": {
+    "loginCasServerUrl":"http://www.company.auth/login",
+    "logoutCasServerUrl":"http://www.company.auth/logout",
+    "loginSuccSign":"Auth Successful",
+    "logoutSuccSign": "Logout successful",
+    "loginRedirect": "http://92.68.8.34/login",
+    "reLoginTimes": 6
+  },
+  "logPath": {
+    "logDir": "/Users/hanhan/go/log/tpc",
+    "logFileName": "tpc"
+  },
+  "timeConfig": {
+    "expireTime": 300,
+    "onlineTime": 180000,
+    "maxIdle": 3,
+    "maxActive": 20
+  }
+}
